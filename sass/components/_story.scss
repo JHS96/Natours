@@ -1,0 +1,30 @@
+.story {
+	width: 75vw;
+	margin: 0 auto;
+	box-shadow: 0 3rem 6rem rgba($color-black, 0.1);
+	background-color: $color-white;
+	border-radius: 3px;
+	padding: 6rem;
+  padding-left: 9rem;
+	font-size: $default-font-size;
+  transform: skewX(-12deg);
+
+	&__shape {
+		width: 15rem; // Must have for shape-outside to work.
+		height: 15rem; // Must have for shape-outside to work.
+		float: left; // Must be floated for shape-outside to work.
+		--webkit-shape-outside: circle(50% at 50% 50%); // Defines how content flows around element.
+		shape-outside: circle(50% at 50% 50%); // Defines how content flows around element.
+		-webkit-clip-path: circle(50% at 50% 50%); // Makes element into same shape as defined in shape-outside.
+		clip-path: circle(50% at 50% 50%); // Makes element into same shape as defined in shape-outside.
+    transform: translateX(-3rem) skewX(12deg);
+	}
+
+  &__img {
+    height: 100%;
+  }
+
+  &__text {
+    transform: skewX(12deg);
+  }
+}
